@@ -1,0 +1,27 @@
+RF - 01 Reservar sala disponivel para turma compativel
+CT-001 Reserva solicitada com 30 alunos \ Sala disponivel de 30 alunos - Reserva Aceita
+
+RF - 02 impedir sobreposição na mesma sala
+CT-001 Reserva solicitada com 40 alunos \ Sala disponivel de 30 alunos - Reserva Recusada Exception- numero de alunos maior que capacidade da sala
+
+RF - 03 impedir turma maior que a capacidade
+CT-001 Reserva solicitada com 40 alunos \ Sala ocupada - Reserva Recusada
+
+RF - 04 Bloquear sala em manutenção
+CT-001 Reserva solicitada com 10 alunos \ Sala em Manutenção - Sala bloqueada
+
+RF - 05 Permitir reservas entre 07h30m e 10h30
+CT - 01 Sala disponível - horário válido : Reservar
+CT - 02 Sala indisponível - horário válido : Rejeitar
+CT - 03 Sala disponível - horário inválido : Rejeitar
+CT - 04 Sala indisponível - horário inválido: Rejeitar
+
+RF - 06 Só coordenação altera reserva de outro professor
+CT - 01 Usuário coordenador - sala reservada : Permitir alteração
+CT - 02 Usuário coordenador - sala livre : Exception
+
+RF - 07 Cancelamento libera horário e registra histórico
+CT - 07 Usuário coordenador - Sala reservada : Liberar sala e registrar histórico de cancelamento
+
+RF - 08 Alteração ou cancelamento gera notificação
+CT - 08 Reserva cancelada : Gerar notificação
